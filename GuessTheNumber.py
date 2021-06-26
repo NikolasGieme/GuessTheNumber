@@ -13,13 +13,13 @@ h = 0
 progr = IntVar()
 progr.set(0)
 
-logo1 = PhotoImage(file="images (1).png")
+logo1 = PhotoImage(file="Up.png")
 logo1 = logo1.subsample(7)
 
-logo2 = PhotoImage(file="images.png")
+logo2 = PhotoImage(file="Down.png")
 logo2 = logo2.subsample(7)
 
-logo3 = PhotoImage(file="checkbox-303113__180.png")
+logo3 = PhotoImage(file="Check.png")
 logo3 = logo3.subsample(7)
 
 
@@ -56,6 +56,7 @@ def Start(event):
     if int(e.get()) == i:
         tries += 1
         l1.config(image=logo3)
+        e.delete(0, END)
         e.config(state='disabled')
     elif int(e.get()) > i:
         l1.config(image=logo2)
