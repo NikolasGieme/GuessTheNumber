@@ -56,6 +56,7 @@ def Start(event):
     if int(e.get()) == i:
         tries += 1
         l1.config(image=logo3)
+        e.delete(0, END)
         e.config(state='disabled')
     elif int(e.get()) > i:
         l1.config(image=logo2)
